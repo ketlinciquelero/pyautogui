@@ -1,0 +1,14 @@
+import pyautogui as pi
+from time import sleep
+
+roteiro = []
+shrek = open("shrek.txt", "r")
+
+sleep(5)
+
+for i in shrek.readlines():
+    roteiro.append(i.rstrip('\n'))
+    pi.typewrite(i)
+    pi.press("enter")
+
+shrek.close()
